@@ -1,5 +1,5 @@
 import {useLoaderData} from 'react-router-dom'
-import {customFetch , generateAmountOptions} from '../utils'
+import {customFetch , formatPrice, generateAmountOptions} from '../utils'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
@@ -15,6 +15,7 @@ export const loader = async ({params}) => {
 const SingleProduct = () => {
   const {product} = useLoaderData();
   const {image,title,price,description , colors, company} = product.attributes;
+  const dollarsAmount = formatPrice(price);
   const [productColor, setProductColor] = useState(colors[0]);
   const [amount , setAmount] = useState(1);
 
@@ -59,7 +60,7 @@ const SingleProduct = () => {
           <h1 className='capitalize text-3xl font-bold'>{title}</h1>
           <h4 className='text-xl text-neutral-content font-bold mt-2'>{company}</h4>
       
-      <p className='mt-3 text-xl'>{price / 100}$</p>
+      <p className='mt-3 text-xl'>{dollarsAmount}</p>
       <p className='mt-6 leading-8'>{description}</p>
       {/*COLORS*/}
       <div className='mt-6'>

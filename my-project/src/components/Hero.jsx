@@ -19,7 +19,7 @@ const Hero = () => {
                 </Link>
             </div>
         </div>
-        <di v className="hidden h-[28rem] lg:carousel carousel-center p-4 space-x-4 bg-neutral rounded-box "> 
+        <div className="hidden h-[28rem] lg:carousel carousel-center p-4 space-x-4 bg-neutral rounded-box "> 
             {carouselImages.map((image) => {
                     return (
                     <div key={image} className="carousel-item">
@@ -27,7 +27,7 @@ const Hero = () => {
                     </div>
                     );
                 })}
-        </di>
+        </div>
     </div>
   )
 }

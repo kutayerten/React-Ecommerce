@@ -8,7 +8,7 @@ const ProductsList = () => {
     <div className="mt-12 grid gap-y-8">
         {products.map((product) => {
             const {title, price, image, company } = product.attributes;
-            const dollarsAmount = price;
+            const dollarsAmount = formatPrice(price);
             return (
                 <Link
                 key={product.id}
@@ -25,7 +25,7 @@ const ProductsList = () => {
                         <h4 className="capitalize font-medium text-md text-neutral-content ">{company}</h4>
                      </div> 
                      <p className="font-medium ml-0 sm:ml-auto text-lg">
-                        {dollarsAmount / 100} $
+                     {dollarsAmount}
                      </p>
                 </Link>
             )
