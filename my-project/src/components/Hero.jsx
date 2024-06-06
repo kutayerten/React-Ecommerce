@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom"
 
-import slider1 from '../assets/matrixx.jpg'
-import slider2 from '../assets/elon-books-4.png'
-import slider3 from '../assets/elon-books-2.png'
-import slider4 from '../assets/elon-books.png'
 
-const carouselImages = [slider1,slider2,slider3,slider4]
+import hero1 from '../assets/matrixx.jpg'
+import hero2 from '../assets/elon-books-4.png'
+import hero3 from '../assets/elon-books-2.png'
+import hero4 from '../assets/elon-books.png'
+
+const carouselImages = [hero1 , hero2 , hero3, hero4];
 
 const Hero = () => {
   return (
